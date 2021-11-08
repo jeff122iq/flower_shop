@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {
+  AuthContainer,
   CartContainer,
   CartResults, HeaderAdaptiveItem,
   HeaderAdaptiveMenu, HeaderAdaptiveMenuLogo,
@@ -53,6 +54,11 @@ export default function Header () {
             <p>Корзина</p>
             <CartResults>3</CartResults>
           </CartContainer>
+          <AuthContainer>
+            <HeaderNavItem href="/sign-in">Войти</HeaderNavItem>
+            <span>|</span>
+            <HeaderNavItem href="/sign-up">Регистрация</HeaderNavItem>
+          </AuthContainer>
         </RootHeaderSection>
         <HeaderNav>
           {navMenu.map(item =>

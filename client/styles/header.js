@@ -150,3 +150,11 @@ export const CartResults = styled.div`
   font-weight: 800;
   font-size: 10px;
 `
+
+export const AuthContainer = styled.div`
+  width: 100%;
+  max-width: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`

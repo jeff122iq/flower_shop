@@ -10,13 +10,16 @@ export const PageFooter = styled.footer`
   background: #ebebeb;  
   padding: 30px 0 60px;
   color: #707070;
+  @media screen and (max-width: 768px) {
+    margin: 0 50px !important;
+  }
 `
 
 export const FooterPaid = styled.div`
   width: 100%;
   max-width: 6.25rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `
 
@@ -37,17 +40,25 @@ export const FooterCatalog = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media screen and (max-width: 425px) {
+    display: none;
+  }
 `
 
 export const FooterRootInfo = styled(FooterCatalog)`
+  display: block;
   p {
     font-size: 10px;
   }
 `
 
-export const FooterInfoForUsers = styled(FooterCatalog)``
+export const FooterInfoForUsers = styled(FooterCatalog)`
+  display: block;
+`
 
-export const FooterContactSection = styled(FooterCatalog)``
+export const FooterContactSection = styled(FooterCatalog)`
+  display: block;
+`
 
 export const ContactItem = styled.li`
   font-size: 10px;

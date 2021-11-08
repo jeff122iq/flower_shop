@@ -23,6 +23,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>Semena</title>
           <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"/>
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
           <link

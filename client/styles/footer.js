@@ -10,9 +10,6 @@ export const PageFooter = styled.footer`
   background: #ebebeb;  
   padding: 30px 0 60px;
   color: #707070;
-  @media screen and (max-width: 768px) {
-    margin: 0 50px !important;
-  }
 `
 
 export const FooterPaid = styled.div`

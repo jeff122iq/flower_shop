@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import {
   AuthContainer,
   CartContainer,
-  CartResults, HeaderAdaptiveItem,
-  HeaderAdaptiveMenu, HeaderAdaptiveMenuLogo,
+  CartResults,
+  HeaderAdaptiveItem,
+  HeaderAdaptiveMenu,
+  HeaderAdaptiveMenuLogo,
   HeaderContainer,
   HeaderNav,
   HeaderNavItem,
@@ -16,26 +18,49 @@ import { navMenu } from '../variables'
 import Search from '../components/generic/Search'
 import { Modal } from '../components/generic/Modal'
 import Link from 'next/link'
+import Auth from '../components/Auth'
+import { AuthModal } from '../styles/authPage'
+import SectionParagraph from '../components/generic/SectionParagraph'
 
 export default function Header () {
-  const [show, setShow] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
+  const [showAuthModal, setShowAuthModal] = useState(false)
+
+  const openAuthModal = () => {
+    setShowAuthModal(true)
+  }
+
+  const closeAuthModal = (e) => {
+    console.log(e.target.className)
+    if (e.target.className === "Modal-sc-wnhraa-0 authPage__AuthModal-sc-8vyp5j-0 koNNxZ eemceD") {
+      setShowAuthModal(!showAuthModal)
+    } else {
+      return;
+    }
+  }
 
   const openMenu = () => {
-    setShow(true)
+    setShowMenu(true)
   }
 
   const closeMenu = () => {
-    setShow(!show)
+    setShowMenu(!showMenu)
   }
 
   return (
     <PageHeader>
       <HeaderContainer>
         {
-          show ?
+          showAuthModal ?
+            <AuthModal onClick={closeAuthModal}>
+              <Auth/>
+            </AuthModal> : null
+        }
+        {
+          showMenu ?
             <div onClick={closeMenu}>
               <Modal>
-                <HeaderAdaptiveMenu show={show}>
+                <HeaderAdaptiveMenu>
                   <HeaderAdaptiveMenuLogo><Link href="/">Logo</Link></HeaderAdaptiveMenuLogo>
                   {navMenu.map(item =>
                     <div key={item.id}>
@@ -55,9 +80,7 @@ export default function Header () {
             <CartResults>3</CartResults>
           </CartContainer>
           <AuthContainer>
-            <HeaderNavItem href="/sign-in">Войти</HeaderNavItem>
-            <span>|</span>
-            <HeaderNavItem href="/sign-up">Регистрация</HeaderNavItem>
+            <SectionParagraph onClick={openAuthModal}>Войти</SectionParagraph>
           </AuthContainer>
         </RootHeaderSection>
         <HeaderNav>

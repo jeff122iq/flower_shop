@@ -6,10 +6,13 @@ export const Form = styled.form`
   width: 100%;
   max-width: 500px;
   display: flex;
-  min-height: 50vh;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: darkgrey;
+  padding: 25px;
+  margin: 0 10px;
+  border-radius: 10px;
 `
 
 export const FormTitle = styled(SectionTitle)`

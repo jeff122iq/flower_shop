@@ -1,9 +1,8 @@
 import styled from 'styled-components'
+import { Modal } from '../components/generic/Modal'
 
-export const AuthPage = styled.div`
-  width: 100%;
+export const AuthModal = styled(Modal)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: darkgrey;
 `

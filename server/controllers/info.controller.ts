@@ -1,5 +1,6 @@
 import {Request, Response} from "express";
 import {QueryResult} from "pg";
+import {IInfoRows} from "../types";
 const pool = require("../db/query")
 const {v4: uuidv4} = require('uuid');
 
@@ -29,7 +30,7 @@ class InfoController {
         try {
             const {title, description} = req.body
             const id = uuidv4();
-            const info = await pool.query(`INSERT INTO Info ("id", "title", "description") VALUES ('${id}', '${title}', '${description}') RETURNING *`)
+            const info:IInfoRows = await pool.query(`INSERT INTO Info ("id", "title", "description") VALUES ('${id}', '${title}', '${description}') RETURNING *`)
             console.log(info)
             res.status(200).json(info.rows)
         } catch (e) {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {
-  AuthContainer,
+  AuthContainer, AuthContainerItem,
   CartContainer,
   CartResults,
   HeaderAdaptiveItem,
@@ -32,7 +32,7 @@ export default function Header () {
 
   const closeAuthModal = (e) => {
     console.log(e.target.className)
-    if (e.target.className === "Modal-sc-wnhraa-0 authPage__AuthModal-sc-8vyp5j-0 koNNxZ eemceD") {
+    if (e.target.className === "Modal-sc-wnhraa-0 authPage__AuthModal-sc-8vyp5j-0 qthTD eemceD") {
       setShowAuthModal(!showAuthModal)
     } else {
       return;
@@ -68,7 +68,8 @@ export default function Header () {
                     </div>)}
                 </HeaderAdaptiveMenu>
               </Modal>
-            </div> : null
+            </div>
+          : null
         }
         <RootHeaderSection>
           <ResponsiveMenuButton className="fas fa-bars" onClick={openMenu}/>
@@ -80,7 +81,7 @@ export default function Header () {
             <CartResults>3</CartResults>
           </CartContainer>
           <AuthContainer>
-            <SectionParagraph onClick={openAuthModal}>Войти</SectionParagraph>
+            <AuthContainerItem onClick={openAuthModal}>Войти</AuthContainerItem>
           </AuthContainer>
         </RootHeaderSection>
         <HeaderNav>

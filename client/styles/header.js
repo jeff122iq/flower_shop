@@ -156,3 +156,7 @@ export const AuthContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
 `
+
+export const AuthContainerItem = styled.p`
+  cursor: pointer;
+`

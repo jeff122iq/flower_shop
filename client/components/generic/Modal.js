@@ -17,15 +17,19 @@ export const Modal = styled.div`
     0% {opacity: 0;}
     100% {opacity: 1;}
   }
-
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  overflow-y: scroll;
-  top: 0; right: 0; bottom: 0; left: 0;
+  -ms-overflow-style: none;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,0.41780462184873945) 100%, rgba(0,0,0,0) 100%);
   z-index: 30;
   animation: fadeIn 0.3s;
+  //@media screen and (max-width: 1024px) {
+  //  overflow-y: scroll;
+  //}
 `

@@ -1,0 +1,15 @@
+{
+  "PORT": "server_port",
+  "HOST": "http://*********",
+  "jwt": {
+    "JWT_ACCESS_SECRET": "*************",
+    "JWT_REFRESH_SECRET": "*************"
+  },
+  "postgres": {
+    "user": "username",
+    "host": "db_host",
+    "database": "db_name",
+    "password": "db_password",
+    "port": "db_port"
+  }
+}

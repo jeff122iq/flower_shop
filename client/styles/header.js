@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Container from '../components/generic/Container'
-import Link from 'next/link'
 import Logo from '../components/generic/Logo'
 
 export const PageHeader = styled.header`
@@ -8,7 +7,7 @@ export const PageHeader = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #449c7a;
+  background-color: #488f08;
   position: relative;
 `
 
@@ -76,7 +75,7 @@ export const HeaderAdaptiveMenu = styled.div`
     max-width: 320px;  
     height: 100vh;
     background-color: #ffffff;
-    color: #449c7a;
+    color: #488f08;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -108,14 +107,21 @@ export const HeaderNav = styled.nav`
   }
 `
 
-export const HeaderNavItem = styled(Link)`
+export const HeaderNavItemContainer = styled.div`
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #256e2b;
+    color: yellow;
+  }
+`
+
+export const HeaderNavItem = styled.a`
   text-decoration: none;
   color: inherit;
-  transition: All 0.3s;
-  &:hover {
-    color: yellow;
-    padding: 0 10px;
-  }
 `
 
 export const HeaderAdaptiveItem = styled(HeaderNavItem)`

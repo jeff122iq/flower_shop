@@ -4,6 +4,7 @@ import {
   CartContainer,
   CartResults,
   HeaderAdaptiveItem,
+  HeaderNavItemContainer,
   HeaderAdaptiveMenu,
   HeaderAdaptiveMenuLogo,
   HeaderContainer,
@@ -86,9 +87,9 @@ export default function Header () {
         </RootHeaderSection>
         <HeaderNav>
           {navMenu.map(item =>
-            <div key={item.id}>
+            <HeaderNavItemContainer key={item.id}>
               <HeaderNavItem href={item.link}>{item.name}</HeaderNavItem>
-            </div>)}
+            </HeaderNavItemContainer>)}
         </HeaderNav>
       </HeaderContainer>
     </PageHeader>

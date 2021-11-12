@@ -9,20 +9,22 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: darkgrey;
+  background-color: #ffffff;
   padding: 25px;
   margin: 0 10px;
   border-radius: 10px;
+  color: #000000;
 `
 
 export const FormTitle = styled(SectionTitle)`
-  color: white;
+  color: #000000;
 `
 
 export const FormInput = styled(PageInput)`
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
   margin: 10px 0;
   border-radius: 10px;
+  color: #000000;
 `
 
 export const FormButton = styled.button`
@@ -30,7 +32,7 @@ export const FormButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #449c7b;
+  background-color: #488f08;
   border: none;
   outline: none;
   color: #ffffff;
